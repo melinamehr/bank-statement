@@ -1,23 +1,43 @@
 class BankAccount
-  @@interest_rate = 0.5
+  @@interest_rate = 1.5
   @@accounts = []
 
   attr_accessor :balance
-  attr_reader :tax
 
-  def initialize(name, price)
-   @balance = 0
- end
+    def initialize(name, price)
+      @balance = 0
+    end
 
-  @deposit = 0 + @@accounts
-  @withdraw = 0 - @@accounts
-
-  def self.create(BankAccount.new)
-    @@accounts
+    def deposit(amount)
+      @balance += amount
+      end
+    amount
   end
-  return BankAccount.new
 
+    def withdraw(amount)
+      @balance -= amount
+      end
+    amount
+  end
 
+    def self.create
+        my_account = BankAccount.new
+        @@accounts << new_account
+      end
+    return BankAccount.new
+  end
+
+  total_funds = 0
+ def self.total_funds
+    @@accounts.each do |fund|
+     total_funds = fund.balance
+   end
+  end
+
+  def self.interest_time
+    @@accounts.each do |interest|
+    @balance *= @@interest_rate
+  end
 
 
 end
