@@ -35,9 +35,8 @@ class BankAccount
   end
 
   def self.interest_time
-    @@accounts.each do |interest|
-    @balance *= @@interest_rate
+    @@accounts.each do |account|
+    account.balance *= @@interest_rate
   end
-
 
 end
